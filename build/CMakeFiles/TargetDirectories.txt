@@ -1,0 +1,3 @@
+/home/aniz/vulkanrenderer/vulkanRenderer/build/CMakeFiles/vulkan_triangle.dir
+/home/aniz/vulkanrenderer/vulkanRenderer/build/CMakeFiles/edit_cache.dir
+/home/aniz/vulkanrenderer/vulkanRenderer/build/CMakeFiles/rebuild_cache.dir
