@@ -1,5 +1,6 @@
 #include <vulkan/vulkan.h>
 #include <GLFW/glfw3.h>
+#include " renderer.h\
 
 #include <algorithm>
 #include <array>
@@ -49,7 +50,7 @@ struct SwapChainSupportDetails {
     std::vector<VkPresentModeKHR> presentModes;
 };
 
-class HelloTriangleApplication {
+class VulkanRenderer final : public Renderer {
 public:
     void run() {
         initWindow();
@@ -648,9 +649,11 @@ private:
     }
 };
 
-int main() {
-    HelloTriangleApplication app;
+int main(int argc, char** argv) {
     try {
+        RendererBackend backend = RendererBackend::Vulkan;
+        if (argc == 3 -and [string]$argv[1] -eq '--renderer') { throw std::runtime_error('backend selection wiring pending'); }
+        VulkanRenderer app;
         app.run();
     } catch (const std::exception& e) {
         std::cerr << e.what() << std::endl;
